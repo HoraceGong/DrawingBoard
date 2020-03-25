@@ -1,4 +1,3 @@
-/*¹¤³Ì´´½¨Õß£º¹¬¾´ÕÜ  Ñ§ºÅ£º2019211914  °à¼¶£º2019211501  ´´½¨Ê±¼ä£º2019Äê10ÔÂ8ÈÕ*/
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <graphics.h>
@@ -7,24 +6,24 @@
 void DrawingBar()
 {
 	setcolor(WHITE);
-	line(0, 50, 1280, 50);  /*»®Ïß£¬ÓÃÓÚ·Ö¸î²»Í¬ÇøÓò*/
-	outtextxy(20, 10, L"´ò¿ª");   /*¹¦ÄÜÇøÄÚÈÝÏÔÊ¾*/
-	outtextxy(60, 10, L"Çå³ýÆÁÄ»");
-	outtextxy(130, 10, L"±£´æ");
+	line(0, 50, 1280, 50);  /*åˆ’çº¿ï¼Œç”¨äºŽåˆ†å‰²ä¸åŒåŒºåŸŸ*/
+	outtextxy(20, 10, L"æ‰“å¼€");   /*åŠŸèƒ½åŒºå†…å®¹æ˜¾ç¤º*/
+	outtextxy(60, 10, L"æ¸…é™¤å±å¹•");
+	outtextxy(130, 10, L"ä¿å­˜");
 	setcolor(WHITE);
 	line(180, 0, 180, 50);
-	outtextxy(190, 10, L"¹¤");   /*¹¤¾ßÇøÄÚÈÝÏÔÊ¾*/
-	outtextxy(190, 30, L"¾ß");
-	outtextxy(220, 10, L"Ö±Ïß");
-	outtextxy(260, 10, L"¾ØÐÎ");
-	outtextxy(300, 10, L"Ô²ÐÎ");
-	outtextxy(220, 30, L"»­±Ê");
-	outtextxy(260, 30, L"±ÊË¢");
-	outtextxy(300, 30, L"ÏðÆ¤");
+	outtextxy(190, 10, L"å·¥");   /*å·¥å…·åŒºå†…å®¹æ˜¾ç¤º*/
+	outtextxy(190, 30, L"å…·");
+	outtextxy(220, 10, L"ç›´çº¿");
+	outtextxy(260, 10, L"çŸ©å½¢");
+	outtextxy(300, 10, L"åœ†å½¢");
+	outtextxy(220, 30, L"ç”»ç¬”");
+	outtextxy(260, 30, L"ç¬”åˆ·");
+	outtextxy(300, 30, L"æ©¡çš®");
 	setcolor(WHITE);
 	line(350, 0, 350, 50);
-	outtextxy(360, 10, L"ÑÕ");   /*ÑÕÉ«ÇøÄÚÈÝÕ¹Ê¾*/
-	outtextxy(360, 30, L"É«");
+	outtextxy(360, 10, L"é¢œ");   /*é¢œè‰²åŒºå†…å®¹å±•ç¤º*/
+	outtextxy(360, 30, L"è‰²");
 	setfillcolor(BLUE);
 	bar(400, 10, 420, 40);
 	setfillcolor(GREEN);
@@ -44,15 +43,15 @@ void DrawingBar()
 	setfillcolor(WHITE);
 	bar(640, 10, 660, 40);
 	line(700, 0, 700, 50);
-	outtextxy(710, 10, L"´ó");
-	outtextxy(710, 30, L"Ð¡");
+	outtextxy(710, 10, L"å¤§");
+	outtextxy(710, 30, L"å°");
 	fillellipse(750, 25, 5, 5);
 	fillellipse(775, 25, 10, 10);
 	fillellipse(815, 25, 15, 15);
 	fillellipse(860, 25, 20, 20);
 	line(900, 0, 900, 50);
-	outtextxy(910, 10, L"¶à±ßÐÎ");
-	outtextxy(1000, 10, L"ÍË³ö");
+	outtextxy(910, 10, L"å¤šè¾¹å½¢");
+	outtextxy(1000, 10, L"é€€å‡º");
 	setcolor(WHITE);
 
 }
@@ -71,7 +70,7 @@ int checkUppercase(char* String)
 		return 0;
 }
 typedef  struct {
-	int type; /* Ô²ÐÎÎª1£¬Ö±ÏßÎª2£¬¾ØÐÎÎª3£¬»­±ÊÎª4 */
+	int type; /* åœ†å½¢ä¸º1ï¼Œç›´çº¿ä¸º2ï¼ŒçŸ©å½¢ä¸º3ï¼Œç”»ç¬”ä¸º4 */
 	int x1;
 	int y1;
 	int x2;
@@ -80,27 +79,27 @@ typedef  struct {
 } SHAPE;
 int main() {
 	SHAPE shape[5000] = { 0 };
-	int x1, y1;   /*x1 y1 ·Ö±ðÎªÊó±êËùÔÚµÄX¡¢Y×ø±ê*/
-	int x2, y2;   /*x2,y2 ·Ö±ðÎªÅÐ¶ÏÊó±êµã»÷Ê±µÄ±äÁ¿*/
-	int choice;   /*choice¾ö¶¨³ÌÐòÄÜ·ñ¼ÌÐøÑ­»·ÏÂÈ¥*/
-	int radius;   /*radiusÎªÔ²µÄ°ë¾¶*/
+	int x1, y1;   /*x1 y1 åˆ†åˆ«ä¸ºé¼ æ ‡æ‰€åœ¨çš„Xã€Yåæ ‡*/
+	int x2, y2;   /*x2,y2 åˆ†åˆ«ä¸ºåˆ¤æ–­é¼ æ ‡ç‚¹å‡»æ—¶çš„å˜é‡*/
+	int choice;   /*choiceå†³å®šç¨‹åºèƒ½å¦ç»§ç»­å¾ªçŽ¯ä¸‹åŽ»*/
+	int radius;   /*radiusä¸ºåœ†çš„åŠå¾„*/
 	char save;
 	int line_x, line_y;
 	int i = 0, j = 0, k = 0, z = 0, z_xy = 0;
 	int count = 0;
 	int t = 0;
 	mouse_msg msg = { 0 };
-	initgraph(1280, 720);      /*»­°å³õÊ¼·Ö±æÂÊÎª1280*720*/
+	initgraph(1280, 720);      /*ç”»æ¿åˆå§‹åˆ†è¾¨çŽ‡ä¸º1280*720*/
 	setbkcolor(BLACK);
 	DrawingBar();
 	mousepos(&x1, &y1);
 	while (1)
 	{
-		mousepos(&x1, &y1);/*É¨ÃèÊó±ê×ø±ê²¢¸³Öµ¸øx1¡¢y1*/
+		mousepos(&x1, &y1);/*æ‰«æé¼ æ ‡åæ ‡å¹¶èµ‹å€¼ç»™x1ã€y1*/
 		getchar();
 		while (mousemsg())
 		{
-			msg = getmouse();  /*¼ì²âÊó±ê×´Ì¬*/
+			msg = getmouse();  /*æ£€æµ‹é¼ æ ‡çŠ¶æ€*/
 		}
 		if (x1 >= 20 && x1 <= 50 && y1 >= 10 && y1 <= 30) {
 			setcolor(WHITE);
@@ -285,7 +284,7 @@ int main() {
 			setcolor(WHITE);
 		}
 		setcolor(WHITE);
-		if (msg.is_left())  /*Í¨¹ýÅÐ¶Ï×ø±êÀ´½øÐÐ¸³Öµ*/
+		if (msg.is_left())  /*é€šè¿‡åˆ¤æ–­åæ ‡æ¥è¿›è¡Œèµ‹å€¼*/
 		{
 			if (x1 >= 20 && x1 <= 50 && y1 >= 10 && y1 <= 30) {
 				int read, number = 0;
@@ -369,7 +368,7 @@ int main() {
 		}
 
 
-		switch (k) {   /*Ñ¡ÔñÑÕÉ«*/
+		switch (k) {   /*é€‰æ‹©é¢œè‰²*/
 		case 1:setcolor(BLUE); break;
 		case 2:setcolor(GREEN); break;
 		case 3:setcolor(RED); break;
@@ -391,7 +390,7 @@ int main() {
 		default:break;
 		}
 
-		if (j == 4) {   /*»­±Ê¹¦ÄÜ*/
+		if (j == 4) {   /*ç”»ç¬”åŠŸèƒ½*/
 			choice = 0;
 			while (1) {
 				msg = getmouse();
@@ -426,7 +425,7 @@ int main() {
 				}
 			}
 		}
-		else if (j == 1) {   /*Ö±Ïß¹¦ÄÜ*/
+		else if (j == 1) {   /*ç›´çº¿åŠŸèƒ½*/
 			choice = 0;
 			while (1)
 			{
@@ -460,7 +459,7 @@ int main() {
 				}
 			}
 		}
-		else if (j == 2) {   /*¾ØÐÎ¹¦ÄÜ*/
+		else if (j == 2) {   /*çŸ©å½¢åŠŸèƒ½*/
 			choice = 0;
 			while (1)
 			{
@@ -471,7 +470,7 @@ int main() {
 				if (msg.is_left()) {
 
 					if (choice == 0) {
-						x1 = msg.x;   /*´ËÊ±x1/y1ÎªÔ²ÐÄ×ø±ê*/
+						x1 = msg.x;   /*æ­¤æ—¶x1/y1ä¸ºåœ†å¿ƒåæ ‡*/
 						y1 = msg.y;
 						choice = 1;
 					}
@@ -493,7 +492,7 @@ int main() {
 				}
 			}
 		}
-		else if (j == 3) {   /*»­Ô²¹¦ÄÜ*/
+		else if (j == 3) {   /*ç”»åœ†åŠŸèƒ½*/
 			choice = 0;
 			while (1)
 			{
@@ -529,7 +528,7 @@ int main() {
 		}
 		else if (j == 5) {
 			choice = 0;
-			switch (k) {   /*Ñ¡ÔñÑÕÉ«*/
+			switch (k) {   /*é€‰æ‹©é¢œè‰²*/
 			case 1:setfillcolor(BLUE); break;
 			case 2:setfillcolor(GREEN); break;
 			case 3:setfillcolor(RED); break;
@@ -612,7 +611,7 @@ int main() {
 			choice = 0;
 			char points[100];
 			int coord[100];
-			inputbox_getline("¶à±ßÐÎ¶¥µã×ø±êÊäÈë¿ò", "ÇëÊäÈëÑÕÉ«¡¢×ø±ê£¬²¢ÒÔ¶ººÅ½øÐÐ·Ö¸î", points, 100);
+			inputbox_getline("å¤šè¾¹å½¢é¡¶ç‚¹åæ ‡è¾“å…¥æ¡†", "è¯·è¾“å…¥é¢œè‰²ã€åæ ‡ï¼Œå¹¶ä»¥é€—å·è¿›è¡Œåˆ†å‰²", points, 100);
 			char* tokenPtr = strtok(points, ",");
 			char* color = tokenPtr;
 			if (checkUppercase(color) == 0);
